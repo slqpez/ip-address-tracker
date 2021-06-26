@@ -1,7 +1,8 @@
 .Header{
     background: url("../../../images/pattern-bg.png");
-    height:200px;
+    height:210px;
     padding:1.3em;
+    text-align: center;
 }
 
 h1{
@@ -23,6 +24,8 @@ h1{
     width: 370px;
     padding:.8em;
     border: none; 
+    color: var(--Very-Dark-Gray);
+    font-weight: 700;
 }
 
 #btn-search{
