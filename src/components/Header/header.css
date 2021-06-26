@@ -1,0 +1,40 @@
+.Header{
+    background: url("../../../images/pattern-bg.png");
+    height:200px;
+    padding:1.3em;
+}
+
+h1{
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: normal;
+    margin-bottom: 1em;
+}
+.search-section{
+    display:flex;
+    justify-content: center;
+}
+
+
+
+#input-search{
+    height:40px;
+    border-radius: 10px 0 0 10px;
+    width: 370px;
+    padding:.8em;
+    border: none; 
+}
+
+#btn-search{
+    background-color: var(--Very-Dark-Gray);
+    border: none;
+    border-radius:0 10px 10px 0;
+    width: 40px;
+    height: 40px;
+    display:inline-block;
+    cursor: pointer;
+}
+
+#btn-search:hover{
+    background-color: #000;
+}
