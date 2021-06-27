@@ -19,11 +19,12 @@
 
 
 body {
-  margin: 0;
+ 
   font-family: var(--font-family);
   font-size: var(--font-size);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
