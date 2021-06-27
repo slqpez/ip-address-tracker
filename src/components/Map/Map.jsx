@@ -15,9 +15,9 @@ L.Icon.Default.mergeOptions({
     shadowUrl
 });
 
-export default function Map() {
-  let position = [51.505, -0.09];
-  
+export default function Map({position = [51.505, -0.09]}) {
+
+  console.log(position)  // TODO Arreglar la posición del mapa
   let style={
     height: "100%",
   }

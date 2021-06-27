@@ -1,24 +1,24 @@
 import React from 'react'
 import "./results.css"
 
-export default function Results() {
+export default function Results({ip, location, timezone, isp}) {
     return (
         <div className="Results">
         <div className="results-info">
             <p>IP ADDRESS</p>
-            <p className="results-data">192.212.174.101</p>
+            <p className="results-data">{ip}</p>
         </div>
         <div className="results-info">
             <p>LOCATION</p>
-            <p className="results-data">Brooklyn, NY 10001</p>
+            <p className="results-data">{location}</p>
         </div>
         <div className="results-info">
             <p>TIMEZONE</p>
-            <p className="results-data">UTC -05:00</p>
+            <p className="results-data">{timezone? `UTC ${timezone}` :""}</p>
         </div>
         <div className="results-info">
             <p>ISP</p>
-            <p className="results-data">SpaceX Starlink</p>
+            <p className="results-data">{isp}</p>
         </div>
         </div>
     )
