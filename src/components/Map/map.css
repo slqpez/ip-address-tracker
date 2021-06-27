@@ -3,6 +3,4 @@
     height:calc(100% - 210px);
     top: -125px;
     z-index: 1;
-    background:red;
-    border:1px solid red;
 }

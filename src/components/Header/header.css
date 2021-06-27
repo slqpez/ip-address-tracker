@@ -1,5 +1,7 @@
 .Header{
     background: url("../../../images/pattern-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     height:210px;
     padding:1.3em;
     text-align: center;
