@@ -15,25 +15,28 @@ L.Icon.Default.mergeOptions({
     shadowUrl
 });
 
-export default function Map({position = [51.505, -0.09]}) {
+export default function Map({position}) {
 
-  console.log(position)  // TODO Arreglar la posición del mapa
+
   let style={
     height: "100%",
   }
   return (
+    
     <div className="Map">
-      <MapContainer center={[51.505, -0.09]} zoom={15} scrollWheelZoom={false} style={style}>
+      {position[0]==="" || position[1]==""?<div/>: 
+      <MapContainer key={position[0]}center={position} zoom={16} scrollWheelZoom={false} style={style}>
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={[51.505, -0.09]} >
+        <Marker position={position} >
           <Popup>
             Close to position.
           </Popup>
         </Marker>
-      </MapContainer>
+      </MapContainer>}
+     
     </div>
   );
 }

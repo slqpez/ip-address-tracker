@@ -38,6 +38,8 @@
 .results-data{
     color: var(--Very-Dark-Gray);
     margin-top: 1em;
-    font-size: 1.6em;
+    font-size: 1.3em;
+    word-break: break-all;
+    white-space: pre-wrap;
     font-weight: 700;
 }

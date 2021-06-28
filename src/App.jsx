@@ -21,19 +21,16 @@ function App() {
 
   const handleSubmit=(e) =>{
     e.preventDefault()
-    setIsSubmited(true)
+    setIsSubmited(!isSubmited)
   }
 
-  const handleChange=(e)=>{
-    setIp(e.target.value)
-    setIsSubmited(false)
-  }
+  const handleChange=(e)=> setIp(e.target.value)
+
 
     useEffect(async () =>{
-      if(isSubmited){
+      
         try {
           const data = await fetchData(ip)
-
           setData({
             ip: data.ip,
             location: data.location.city,
@@ -44,10 +41,10 @@ function App() {
 
           })
         } catch (error) {
-          console.log("Ingresaste una ip inválida")
+          console.log("Ingresaste una ip inválida") //TODO Mostrar un mensaje en pantalla de que metió una ip inválida.
         }
        
-      }
+      
 
     },[isSubmited])
 
@@ -57,7 +54,7 @@ function App() {
   return (
     <div className="App">
      <Header handleSubmit={handleSubmit} inputValue={ip} handleChange={handleChange}/>
-     <Results ip={data.ip} location={data.location} timezone={data.timezone} isp={data.isp}/>
+      <Results ip={data.ip} location={data.location} timezone={data.timezone} isp={data.isp}/>
      <Map position={[data.lat, data.lng]}/>
     </div>
   )
