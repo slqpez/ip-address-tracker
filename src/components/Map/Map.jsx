@@ -25,7 +25,7 @@ export default function Map({position}) {
     
     <div className="Map">
       {position[0]==="" || position[1]==""?<div/>: 
-      <MapContainer key={position[0]}center={position} zoom={16} scrollWheelZoom={false} style={style}>
+      <MapContainer key={position[0]}center={position} zoom={16} scrollWheelZoom={true} style={style}>
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

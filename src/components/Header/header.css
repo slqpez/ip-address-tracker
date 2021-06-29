@@ -43,3 +43,11 @@ h1{
 #btn-search:hover{
     background-color: #000;
 }
+
+@media (max-width: 768px){
+
+    .Header{
+        height: 260px;
+    }
+    
+}

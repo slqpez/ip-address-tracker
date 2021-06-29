@@ -3,11 +3,13 @@ import './App.css'
 import Header from './components/Header/Header'
 import Results from './components/Results/Results'
 import Map from './components/Map/Map'
+import Message from './components/Message/Message'
 import fetchData from "../src/services/IP"
 
 function App() {
   const [ip, setIp] = useState("")
   const [isSubmited,setIsSubmited] = useState(false)
+  const [validIP, setValidIP] = useState(true)
   const [data, setData] = useState({
     ip:"",
     location:"",
@@ -40,8 +42,9 @@ function App() {
             lng: data.location.lng
 
           })
+          setValidIP(true)
         } catch (error) {
-          console.log("Ingresaste una ip inválida") //TODO Mostrar un mensaje en pantalla de que metió una ip inválida.
+          setValidIP(false)
         }
        
       
@@ -54,8 +57,10 @@ function App() {
   return (
     <div className="App">
      <Header handleSubmit={handleSubmit} inputValue={ip} handleChange={handleChange}/>
-      <Results ip={data.ip} location={data.location} timezone={data.timezone} isp={data.isp}/>
-     <Map position={[data.lat, data.lng]}/>
+     {validIP? <><Results ip={data.ip} location={data.location} timezone={data.timezone} isp={data.isp}/>
+     <Map position={[data.lat, data.lng]}/></>: <Message/>}
+      
+  
     </div>
   )
 }

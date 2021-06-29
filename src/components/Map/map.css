@@ -4,3 +4,9 @@
     top: -125px;
     z-index: 1;
 }
+
+@media (max-width: 768px){
+    .Map{
+        top: -245px;
+    }
+}

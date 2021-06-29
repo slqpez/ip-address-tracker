@@ -1,0 +1,9 @@
+.Message{
+    background-color: rgb(218, 101, 101);
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.2em;
+    margin-top: 1em;
+    padding:1em;
+    color: #fff;
+}

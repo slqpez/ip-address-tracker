@@ -1,6 +1,7 @@
 .Results{
     color: var(--Dark-Gray);
-    width:80%;    margin: 0 auto;
+    width:80%;   
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,4 +43,28 @@
     word-break: break-all;
     white-space: pre-wrap;
     font-weight: 700;
+}
+
+@media (max-width: 768px){
+    .Results{
+        flex-direction: column;
+        top:-125px;
+        gap:0;
+    }
+
+    .results-info{
+        text-align: center;
+        padding: 0 .6em ;
+        
+    }
+
+    .results-info:not(:nth-last-child(1)):after{
+        display:none;
+        
+    }
+
+    .results-data{
+        margin-top: .5em;
+    }
+    
 }
