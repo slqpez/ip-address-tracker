@@ -23,7 +23,9 @@ function App() {
 
   const handleSubmit=(e) =>{
     e.preventDefault()
-    setIsSubmited(!isSubmited)
+    if(ip) setIsSubmited(!isSubmited)
+    setValidIP(false)
+ 
   }
 
   const handleChange=(e)=> setIp(e.target.value)
